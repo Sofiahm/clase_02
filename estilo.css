@@ -13,9 +13,10 @@ https://developer.mozilla.org/es/docs/Web/CSS/At-rule#Grupos_de_Reglas_Condicion
 
 
 
-@keyframes agua {
+@keyframes cualquiera {
   from {
     background: #DDEECC;
+    padding:30;
   }
   to {
     background: #ff8a80;
@@ -30,21 +31,29 @@ body {
   line-height: 1.75;
   overflow-x: hidden;
   /* a continuación llamaré a la animación definada más arriba */
-  animation-name: agua; 
-  animation-duration: 5s;
-  animation-timing-function: ease;
+
+  animation: cualquiera 1s ease-in infinite alternate;
+
+
+  /*
+  comentariooooo
+  animation-name: cualquiera; 
+  animation-duration: 1s;
+  animation-timing-function: ease- in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   /* más sobre animación en https://developer.mozilla.org/es/docs/Web/CSS/animation */
 }
 
 a{
-  color:#222;
+  color:#f00;
   transition: all ease 1s;
 }
 
 a:hover{
-  color:#000;
+  color:#0f0;
+  background:black;
+  margin: 1rem;
   text-decoration: none;
 }
 
@@ -64,7 +73,7 @@ pre{
 pre:hover{
   background:rgba(255,255,255,0.4);
   transition: background ease 1s;
-  cursor:crosshair;
+  cursor:pointer;
 }
 
 code{
